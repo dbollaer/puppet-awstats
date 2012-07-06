@@ -3,8 +3,7 @@ define awstats::add_vhost
 	$ensure = present,
 	$domain = $name,
 	$port = 80,
-	$log_file,
-	$export = false
+	$log_file
 ) {
 	include awstats
 

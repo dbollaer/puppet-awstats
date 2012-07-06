@@ -1,4 +1,4 @@
- define awstats::collect_conf()
+define awstats::collect_conf()
 {
 	Awstats::Add_vhost <<| |>>
 }

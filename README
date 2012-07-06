@@ -1,1 +1,60 @@
- 
+Overview
+========
+
+This module manages awstats and per-vhost configuration
+
+Example
+=======
+
+awstats::add_vhost { "website.com":
+	log_file => "/var/log/website.com.log",
+	port     => 80
+	ensure   => "present"
+}
+
+
+Variables
+=========
+
+
+Classes
+=======
+
+awstats
+----------
+
+This class install the awstats package and copy the main configuration files.
+Those files can be redefined in a site-awstats module with node or distro
+specific support
+
+
+Defines
+=======
+
+awstats::add_vhost
+------------------
+
+Create the configuration for an existing vhost
+
+Parameters:
+	$ensure: present or absent
+	$domain: the domain of the vhost
+	$port: the port used by the vhost
+	$log_file: the location of the log file of the vhost
+
+awstats::collect_conf
+---------------------
+
+Collect all exported awstats configuration
+
+
+Licensing
+=========
+
+This puppet module is licensed under the GPL version 3 or later. Redistribution
+and modification is encouraged.
+
+The GPL version 3 license text can be found in the "LICENSE" file accompanying
+this puppet module, or at the following URL:
+
+http://www.gnu.org/licenses/gpl-3.0.html
