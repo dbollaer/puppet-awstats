@@ -5,7 +5,7 @@ class awstats {
 	}
 	
 	exec { "refresh_awstats":
-		command => 'perl awstats_updateall.pl now -awstatsprog=/usr/lib/cgi-bin/awstats.pl',
+		command => 'perl /usr/share/doc/awstats/examples/awstats_updateall.pl now -awstatsprog=/usr/lib/cgi-bin/awstats.pl',
 		refreshonly => true
 	}
 	
