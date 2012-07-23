@@ -12,11 +12,6 @@ awstats::add_vhost { "website.com":
 	ensure   => "present"
 }
 
-
-Variables
-=========
-
-
 Classes
 =======
 
@@ -27,6 +22,10 @@ This class install the awstats package and copy the main configuration files.
 Those files can be redefined in a site-awstats module with node or distro
 specific support
 
+awstats::collect_conf
+---------------------
+
+Collect all exported awstats configuration from remote web servers
 
 Defines
 =======
@@ -41,12 +40,6 @@ Parameters:
 	$domain: the domain of the vhost
 	$port: the port used by the vhost
 	$log_file: the location of the log file of the vhost
-
-awstats::collect_conf
----------------------
-
-Collect all exported awstats configuration
-
 
 Licensing
 =========
