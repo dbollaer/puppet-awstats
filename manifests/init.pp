@@ -30,7 +30,7 @@ class awstats {
 				"puppet:///modules/site-awstats/${::operatingsystem}/awstats.conf.local",
 				"puppet:///modules/site-awstats/awstats.conf.local",
 				"puppet:///modules/awstats/${::operatingsystem}/awstats.conf.local",
-				"puppet:///modules/awstats/awstats.local" ],
+				"puppet:///modules/awstats/awstats.conf.local" ],
 			owner   => root,
 			group   => root,
 			mode    => 0644,
